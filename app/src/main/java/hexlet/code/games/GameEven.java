@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class GameEven {
-    public static int even(Scanner scanner, String userName) {
+    public static int even(Scanner scanner) {
         final int initialRange = 1;
         final int endRange = 100;
         int genValue = initialRange + (int) (Math.random() * endRange + 1);

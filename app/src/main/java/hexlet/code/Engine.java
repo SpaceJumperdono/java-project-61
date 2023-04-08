@@ -31,7 +31,7 @@ public class Engine {
                 return;
         }
         for (int i = 0; i < 3; i++) {
-            if (userChoice == 2 && GameEven.even(scanner, userName) == 1) {
+            if (userChoice == 2 && GameEven.even(scanner) == 1) {
                 System.out.println("Let's try again " + userName);
                 scanner.close();
                 return;
