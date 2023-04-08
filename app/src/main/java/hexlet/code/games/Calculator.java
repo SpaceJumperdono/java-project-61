@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Calculator {
     public static int calc(Scanner scanner) {
-        final int NUMBEROPERATION = 3;
-        final int INITIAL_RANGE = 1;
-        final int END_RANGE = 100;
-        int genOperation = 1 + (int) (Math.random() * NUMBEROPERATION + 1);
-        int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
-        int genValue2 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        final int numberOperation = 3;
+        final int initialRange = 1;
+        final int endRange = 100;
+        int genOperation = 1 + (int) (Math.random() * numberOperation + 1);
+        int genValue1 = initialRange + (int) (Math.random() * endRange + 1);
+        int genValue2 = initialRange + (int) (Math.random() * endRange + 1);
         int result = 0;
         switch (genOperation) {
             case 1:
