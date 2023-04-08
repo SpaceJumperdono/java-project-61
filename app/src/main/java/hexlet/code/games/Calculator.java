@@ -16,7 +16,7 @@ public class Calculator {
                 result = genValue1 + genValue2;
                 System.out.println("Question: " + genValue1 + "+" + genValue2);
                 break;
-            case 2 :
+            case 2:
                 result = genValue1 - genValue2;
                 System.out.println("Question: " + genValue1 + "-" + genValue2);
                 break;
@@ -27,13 +27,11 @@ public class Calculator {
         }
         System.out.print("Your answer: ");
         int userAnswer = Integer.parseInt(scanner.next());
-        if (result == userAnswer) {
-            System.out.println("Correct!");
-            return 0;
-        } else {
+        if (result != userAnswer) {
             System.out.print("'" + userAnswer + "' is wrong answer ;(. ");
             System.out.println("Correct answer was '" + result + "'.");
             return 1;
         }
+        return 0;
     }
 }

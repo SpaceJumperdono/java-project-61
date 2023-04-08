@@ -10,11 +10,7 @@ public class GameEven {
         System.out.println("Question: " + genValue);
         System.out.print("Your answer: ");
         String userAnswer = scanner.next().toLowerCase();
-        if (genValue % 2 == 0 && userAnswer.equals("yes")) {
-            System.out.println("Correct!");
-        } else if (genValue % 2 != 0 && userAnswer.equals("no")) {
-            System.out.println("Correct!");
-        } else {
+        if (genValue % 2 == 0 && userAnswer.equals("no") || genValue % 2 != 0 && userAnswer.equals("yes")) {
             String correctAnswer = userAnswer.equals("yes") ? "no" : "yes";
             System.out.print("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was '");
             System.out.println(correctAnswer + "'.");
