@@ -1,32 +1,35 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Scanner;
 
 public class GameGcd {
-    public static int gcd(Scanner scanner) {
+    public static int gcd(Scanner scanner, String userName) {
         final int initialRange = 1;
         final int endRange = 100;
-        int genValue1 = initialRange + (int) (Math.random() * endRange + 1);
-        int genValue2 = initialRange + (int) (Math.random() * endRange + 1);
+        for (int i = 0; i < 3; i++) {
+            int genValue1 = initialRange + (int) (Math.random() * endRange + 1);
+            int genValue2 = initialRange + (int) (Math.random() * endRange + 1);
 
-        System.out.println("Question: " + genValue1 + " " + genValue2);
-        System.out.print("Your answer: ");
-        int userAnswer = Integer.parseInt(scanner.next());
-
-        int correctAnswer = 0;
-        while (genValue1 != 0 && genValue2 != 0) {
-            if (genValue1 > genValue2) {
-                genValue1 = genValue1 % genValue2;
-            } else {
-                genValue2 = genValue2 % genValue1;
+            System.out.println("Question: " + genValue1 + " " + genValue2);
+            System.out.print("Your answer: ");
+            String userAnswer = scanner.next();
+            while (genValue1 != 0 && genValue2 != 0) {
+                if (genValue1 > genValue2) {
+                    genValue1 = genValue1 % genValue2;
+                } else {
+                    genValue2 = genValue2 % genValue1;
+                }
             }
+            String correctAnswer = Integer.toString(genValue1 + genValue2);
+            if (!userAnswer.equals(correctAnswer)) {
+                Engine.errorAnswer(correctAnswer, userAnswer, userName);
+                return 1;
+            }
+            System.out.println("Correct!");
         }
-        correctAnswer = genValue1 + genValue2;
-        if (userAnswer != correctAnswer) {
-            System.out.print("'" + userAnswer + "' is wrong answer ;(. ");
-            System.out.println("Correct answer was '" + correctAnswer + "'.");
-            return 1;
-        }
+        System.out.println("Congratulations, " + userName + "!");
         return 0;
     }
 }
