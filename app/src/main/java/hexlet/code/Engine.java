@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.GameEven;
 import hexlet.code.games.GameGcd;
+import hexlet.code.games.GamePrime;
 import hexlet.code.games.GameProgression;
 
 import java.util.Scanner;
@@ -11,7 +12,7 @@ public class Engine {
     public static void start() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n0 - Exit\n");
+        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit\n");
         System.out.print("Your choice: ");
         int userChoice = Integer.parseInt(scanner.nextLine());
         String userName = "";
@@ -39,6 +40,10 @@ public class Engine {
                 userName = Greeting.greetings(scanner);
                 System.out.println("What number is missing in the progression?");
                 GameProgression.progressoion(scanner, userName);
+            case 6:
+                userName = Greeting.greetings(scanner);
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.?");
+                GamePrime.prime(scanner, userName);
             default:
                 scanner.close();
                 return;

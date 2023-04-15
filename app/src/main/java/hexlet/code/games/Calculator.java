@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Calculator {
-    public static int calc(Scanner scanner, String userName) {
+    public static void calc(Scanner scanner, String userName) {
         final int numberOperation = 3;
         final int initialRange = 1;
         final int endRange = 100;
@@ -33,11 +33,9 @@ public class Calculator {
             String correctAnswer = Integer.toString(result);
             if (!userAnswer.equals(correctAnswer)) {
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
-                return 1;
             }
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName + "!");
-        return 0;
     }
 }

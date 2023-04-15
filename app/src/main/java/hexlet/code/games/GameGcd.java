@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class GameGcd {
-    public static int gcd(Scanner scanner, String userName) {
+    public static void gcd(Scanner scanner, String userName) {
         final int initialRange = 1;
         final int endRange = 100;
         for (int i = 0; i < 3; i++) {
@@ -25,11 +25,10 @@ public class GameGcd {
             String correctAnswer = Integer.toString(genValue1 + genValue2);
             if (!userAnswer.equals(correctAnswer)) {
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
-                return 1;
+                return;
             }
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName + "!");
-        return 0;
     }
 }
