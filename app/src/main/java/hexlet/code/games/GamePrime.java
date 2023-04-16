@@ -15,7 +15,7 @@ public class GamePrime {
             String userAnswer = scanner.next();
             boolean flagPrime = GamePrime.checkPrime(genValue);
             String correctAnswer = Engine.correctAnswer(flagPrime);
-            if (userAnswer.equals(correctAnswer)) {
+            if (!userAnswer.equals(correctAnswer)) {
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
                 return;
             }
