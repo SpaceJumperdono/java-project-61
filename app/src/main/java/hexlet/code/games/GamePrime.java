@@ -8,7 +8,8 @@ public class GamePrime {
     public static void prime(Scanner scanner, String userName) {
         final int initialRange = 1;
         final int endRange = 100;
-        for (int i = 0; i < 3; i++) {
+        final int rounds = 3;
+        for (int i = 0; i < rounds; i++) {
             int genValue = initialRange + (int) (Math.random() * endRange + 1);
             System.out.println("Question: " + genValue);
             System.out.print("Your answer: ");

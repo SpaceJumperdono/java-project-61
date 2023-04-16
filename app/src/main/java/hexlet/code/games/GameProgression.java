@@ -9,8 +9,10 @@ public class GameProgression {
         final int initialRange = 1;
         final int endRangeMas = 100;
         final int endRangeStep = 15;
-        int[] array = new int[10];
-        for (int i = 0; i < 3; i++) {
+        final int arraySize = 10;
+        int[] array = new int[arraySize];
+        final int rounds = 3;
+        for (int i = 0; i < rounds; i++) {
             int startValue = initialRange + (int) (Math.random() * endRangeMas + 1);
             int genStep = initialRange + (int) (Math.random() * endRangeStep + 1);
             int randomValue = (int) (Math.random() * array.length);

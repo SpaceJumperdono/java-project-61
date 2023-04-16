@@ -9,7 +9,8 @@ public class Calculator {
         final int numberOperation = 3;
         final int initialRange = 1;
         final int endRange = 100;
-        for (int i = 0; i < 3; i++) {
+        final int rounds = 3;
+        for (int i = 0; i < rounds; i++) {
             int genOperation = 1 + (int) (Math.random() * numberOperation + 1);
             int genValue1 = initialRange + (int) (Math.random() * endRange + 1);
             int genValue2 = initialRange + (int) (Math.random() * endRange + 1);
