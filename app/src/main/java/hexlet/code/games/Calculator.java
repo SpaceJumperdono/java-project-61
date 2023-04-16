@@ -17,15 +17,15 @@ public class Calculator {
             switch (genOperation) {
                 case 1:
                     result = genValue1 + genValue2;
-                    System.out.println("Question: " + genValue1 + "+" + genValue2);
+                    System.out.println("Question: " + genValue1 + " + " + genValue2);
                     break;
                 case 2:
                     result = genValue1 - genValue2;
-                    System.out.println("Question: " + genValue1 + "-" + genValue2);
+                    System.out.println("Question: " + genValue1 + " - " + genValue2);
                     break;
                 default:
                     result = genValue1 * genValue2;
-                    System.out.println("Question: " + genValue1 + "*" + genValue2);
+                    System.out.println("Question: " + genValue1 + " * " + genValue2);
                     break;
             }
             System.out.print("Your answer: ");
