@@ -13,16 +13,7 @@ public class GamePrime {
             System.out.println("Question: " + genValue);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
-            boolean flagPrime = true;
-            if (genValue == 1) {
-                flagPrime = false;
-            }
-            for (int j = 2; j * j <= genValue; j++) {
-                if (genValue % j == 0) {
-                    flagPrime = false;
-                    break;
-                }
-            }
+            boolean flagPrime = GamePrime.checkPrime(genValue);
             if ((!flagPrime && userAnswer.equals("yes")) || (flagPrime && userAnswer.equals("no"))) {
                 String correctAnswer = userAnswer.equals("yes") ? "no" : "yes";
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
@@ -31,5 +22,19 @@ public class GamePrime {
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName + "!");
+    }
+
+    public static boolean checkPrime(int genValue) {
+        boolean flagPrime = true;
+        if (genValue == 1) {
+            flagPrime = false;
+        }
+        for (int j = 2; j * j <= genValue; j++) {
+            if (genValue % j == 0) {
+                flagPrime = false;
+                break;
+            }
+        }
+        return flagPrime;
     }
 }
