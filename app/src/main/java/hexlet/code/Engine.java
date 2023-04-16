@@ -54,7 +54,7 @@ public class Engine {
     public static void errorAnswer(String correctAnswer, String userAnswer, String userName) {
         System.out.print("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was '");
         System.out.println(correctAnswer + "'.");
-        System.out.println("Let's try again, " + userName);
+        System.out.println("Let's try again, " + userName +"!");
     }
 
     public static String correctAnswer(boolean expression) {
