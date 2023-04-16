@@ -33,6 +33,7 @@ public class Calculator {
             String correctAnswer = Integer.toString(result);
             if (!userAnswer.equals(correctAnswer)) {
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
+                return;
             }
             System.out.println("Correct!");
         }
