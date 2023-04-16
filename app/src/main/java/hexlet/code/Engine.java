@@ -40,10 +40,12 @@ public class Engine {
                 userName = Greeting.greetings(scanner);
                 System.out.println("What number is missing in the progression?");
                 GameProgression.progression(scanner, userName);
+                break;
             case 6:
                 userName = Greeting.greetings(scanner);
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.?");
                 GamePrime.prime(scanner, userName);
+                break;
             default:
                 scanner.close();
                 return;
