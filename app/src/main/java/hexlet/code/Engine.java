@@ -56,4 +56,8 @@ public class Engine {
         System.out.println(correctAnswer + "'.");
         System.out.println("Let's try again, " + userName);
     }
+
+    public static String correctAnswer(boolean expression) {
+        return expression ? "yes" : "no";
+    }
 }
