@@ -16,6 +16,7 @@ public class GameEven {
             if (genValue % 2 == 0 && userAnswer.equals("no") || genValue % 2 != 0 && userAnswer.equals("yes")) {
                 String correctAnswer = userAnswer.equals("yes") ? "no" : "yes";
                 Engine.errorAnswer(correctAnswer, userAnswer, userName);
+                return;
             }
             System.out.println("Correct!");
         }
