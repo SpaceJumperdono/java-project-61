@@ -9,6 +9,12 @@ import hexlet.code.games.GameProgression;
 import java.util.Scanner;
 
 public class Engine {
+    public static final int GREET = 1;
+    public static final int EVEN = 2;
+    public static final int CALC = 3;
+    public static final int GCD = 4;
+    public static final int PROGRESSION = 5;
+    public static final int PRIME = 6;
     public static void start() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
@@ -17,31 +23,31 @@ public class Engine {
         int userChoice = Integer.parseInt(scanner.nextLine());
         String userName = "";
         switch (userChoice) {
-            case 1:
+            case GREET:
                 Greeting.greetings(scanner);
                 scanner.close();
                 return;
-            case 2:
+            case EVEN:
                 userName = Greeting.greetings(scanner);
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 GameEven.even(scanner, userName);
                 break;
-            case 3:
+            case CALC:
                 userName = Greeting.greetings(scanner);
                 System.out.println("What is the result of the expression?");
                 Calculator.calc(scanner, userName);
                 break;
-            case 4:
+            case GCD:
                 userName = Greeting.greetings(scanner);
                 System.out.println("Find the greatest common divisor of given numbers.");
                 GameGcd.gcd(scanner, userName);
                 break;
-            case 5:
+            case PROGRESSION:
                 userName = Greeting.greetings(scanner);
                 System.out.println("What number is missing in the progression?");
                 GameProgression.progression(scanner, userName);
                 break;
-            case 6:
+            case PRIME:
                 userName = Greeting.greetings(scanner);
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.?");
                 GamePrime.prime(scanner, userName);
