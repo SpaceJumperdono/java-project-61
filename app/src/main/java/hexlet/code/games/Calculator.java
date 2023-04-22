@@ -1,43 +1,34 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class Calculator {
-    public static void calc(Scanner scanner, String userName) {
-        final int numberOperation = 3;
-        final int initialRange = 1;
-        final int endRange = 100;
-        final int rounds = 3;
-        for (int i = 0; i < rounds; i++) {
-            int genOperation = 1 + (int) (Math.random() * numberOperation + 1);
-            int genValue1 = initialRange + (int) (Math.random() * endRange + 1);
-            int genValue2 = initialRange + (int) (Math.random() * endRange + 1);
-            int result = 0;
-            switch (genOperation) {
-                case 1:
-                    result = genValue1 + genValue2;
-                    System.out.println("Question: " + genValue1 + " + " + genValue2);
-                    break;
-                case 2:
-                    result = genValue1 - genValue2;
-                    System.out.println("Question: " + genValue1 + " - " + genValue2);
-                    break;
-                default:
-                    result = genValue1 * genValue2;
-                    System.out.println("Question: " + genValue1 + " * " + genValue2);
-                    break;
-            }
-            System.out.print("Your answer: ");
-            String userAnswer = scanner.next();
-            String correctAnswer = Integer.toString(result);
-            if (!userAnswer.equals(correctAnswer)) {
-                Engine.errorAnswer(correctAnswer, userAnswer, userName);
-                return;
-            }
-            System.out.println("Correct!");
+    public static final int NUMBER_OPERATION = 3;
+    public static final int INITIAL_RANGE = 1;
+    public static final int END_RANGE = 100;
+    public static final int SIZE_ARRAY = 2;
+    public static String[] calc() {
+        String[] messageGame = new String[SIZE_ARRAY];
+        int genOperation = 1 + (int) (Math.random() * NUMBER_OPERATION + 1);
+        int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        int genValue2 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        int result = 0;
+        String question = "";
+        switch (genOperation) {
+            case 1:
+                result = genValue1 + genValue2;
+                question = "Question: " + genValue1 + " + " + genValue2;
+                break;
+            case 2:
+                result = genValue1 - genValue2;
+                question = "Question: " + genValue1 + " - " + genValue2;
+                break;
+            default:
+                result = genValue1 * genValue2;
+                question = "Question: " + genValue1 + " * " + genValue2;
+                break;
+
         }
-        System.out.println("Congratulations, " + userName + "!");
+        messageGame[0] = question;
+        messageGame[1] = Integer.toString(result);
+        return messageGame;
     }
 }
