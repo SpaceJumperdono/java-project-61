@@ -16,7 +16,7 @@ public class Progression {
         for (int j = 1; j < progressionArray.length; j++) {
             progressionArray[j] = progressionArray[j - 1] + genStep;
         }
-        messageGame[0] = Progression.printArrayWithSecretValue(progressionArray, randomValue);
+        messageGame[0] = "Question: " + Progression.printArrayWithSecretValue(progressionArray, randomValue);
         String correctAnswer = Integer.toString(progressionArray[randomValue]);
         messageGame[1] = correctAnswer;
         return messageGame;
