@@ -1,8 +1,11 @@
 package hexlet.code;
 
-
 import java.util.Scanner;
-
+import hexlet.code.games.Even;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 public class App {
 
     public static final int GREET = 1;
@@ -27,27 +30,27 @@ public class App {
         Engine engine = new Engine();
         switch (userChoice) {
             case GREET:
-                Greeting.greetings(scanner);
+                engine.start();
                 break;
 
             case EVEN:
-                Engine.evenStart(scanner);
+                engine.start(new Even());
                 break;
 
             case CALC:
-                Engine.calculatorStart(scanner);
+                engine.start(new Calculator());
                 break;
 
             case GCD:
-                Engine.gdcStart(scanner);
+                engine.start(new Gcd());
                 break;
 
             case PROGRESSION:
-                Engine.progressionStart(scanner);
+                engine.start(new Progression());
                 break;
 
             case PRIME:
-                Engine.primeStart(scanner);
+                engine.start(new Prime());
                 break;
 
             default:

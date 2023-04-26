@@ -20,21 +20,21 @@ public class Progression implements Game {
         for (int j = 1; j < progressionArray.length; j++) {
             progressionArray[j] = progressionArray[j - 1] + genStep;
         }
-        messageGame[0] = "Question: " + printArrayWithSecretValue(progressionArray, randomValue);
+        messageGame[0] = printArrayWithSecretValue(progressionArray, randomValue);
         String correctAnswer = Integer.toString(progressionArray[randomValue]);
         messageGame[1] = correctAnswer;
         return messageGame;
     }
 
     public String printArrayWithSecretValue(int[] array, int randomValue) {
-        String line = "";
+        StringBuilder line = new StringBuilder();
         for (int j = 0; j < array.length; j++) {
             if (j == randomValue) {
-                line += ".. ";
+                line.append(".. ");
                 continue;
             }
-            line += array[j] + " ";
+            line.append(array[j]).append(" ");
         }
-        return line;
+        return line.toString();
     }
 }

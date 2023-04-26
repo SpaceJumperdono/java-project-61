@@ -1,24 +1,21 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
-
 public class Prime implements Game {
     public static final int INITIAL_RANGE = 1;
     public static final int END_RANGE = 100;
     public static final int ROUNDS = 3;
     public static final int SIZE_ARRAY = 2;
 
-    public String getTasK() {
+    public String getTask() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.?";
     }
 
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
         int genValue = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
-        messageGame[0] = "Question: " + genValue;
+        messageGame[0] = Integer.toString(genValue);
         boolean flagPrime = checkPrime(genValue);
-        messageGame[1] = Engine.correctAnswer(flagPrime);
+        messageGame[1] = flagPrime ? "yes" : "no";
         return messageGame;
     }
 

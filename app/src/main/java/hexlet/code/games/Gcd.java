@@ -14,16 +14,21 @@ public class Gcd implements Game {
         int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
         int genValue2 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
 
-        messageGame[0] = "Question: " + genValue1 + " " + genValue2;
-        while (genValue1 != 0 && genValue2 != 0) {
-            if (genValue1 > genValue2) {
-                genValue1 = genValue1 % genValue2;
-            } else {
-                genValue2 = genValue2 % genValue1;
-            }
-        }
-        String correctAnswer = Integer.toString(genValue1 + genValue2);
+        messageGame[0] = genValue1 + " " + genValue2;
+
+        String correctAnswer = Integer.toString(findGdc(genValue1, genValue2));
         messageGame[1] = correctAnswer;
         return messageGame;
+    }
+
+    public int findGdc(int value1, int value2) {
+        while (value1 != 0 && value2 != 0) {
+            if (value1 > value2) {
+                value1 = value1 % value2;
+            } else {
+                value2 = value2 % value1;
+            }
+        }
+        return value1 + value2;
     }
 }

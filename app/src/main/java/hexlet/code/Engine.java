@@ -1,6 +1,7 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+
+import hexlet.code.games.Game;
 
 import java.util.Scanner;
 
@@ -18,18 +19,26 @@ public class Engine {
         System.out.println(task);
         for (int i = 0; i < ROUNDS; i++) {
             String[] dataGame = game.getDataPair();
-            System.out.print("Question: " + dataGame[QUESTION]);
+            System.out.println("Question: " + dataGame[QUESTION]);
+            System.out.print("Your answer: ");
             String userAnswer = scanner.next();
             if (!userAnswer.equals(dataGame[ANSWER])) {
                 System.out.print("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was '");
                 System.out.println(dataGame[ANSWER] + "'.");
                 System.out.println("Let's try again, " + name + "!");
+                return;
             }
             System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + name + "!");
     }
-
+    public void start() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+    }
 
 
 }

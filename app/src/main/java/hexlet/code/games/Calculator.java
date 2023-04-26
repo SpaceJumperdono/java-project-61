@@ -19,15 +19,15 @@ public class Calculator implements Game {
         switch (genOperation) {
             case 1:
                 result = genValue1 + genValue2;
-                question = "Question: " + genValue1 + " + " + genValue2;
+                question = genValue1 + " + " + genValue2;
                 break;
             case 2:
                 result = genValue1 - genValue2;
-                question = "Question: " + genValue1 + " - " + genValue2;
+                question = genValue1 + " - " + genValue2;
                 break;
             default:
                 result = genValue1 * genValue2;
-                question = "Question: " + genValue1 + " * " + genValue2;
+                question = genValue1 + " * " + genValue2;
                 break;
 
         }

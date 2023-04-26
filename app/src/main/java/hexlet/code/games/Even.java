@@ -10,9 +10,13 @@ public class Even implements Game {
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
         int genValue = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
-        messageGame[0] = "Question: " + genValue;
-        String correctAnswer = genValue % 2 == 0 ? "yes" : "no";
+        messageGame[0] = Integer.toString(genValue);
+        String correctAnswer = checkEven(genValue);
         messageGame[1] = correctAnswer;
         return messageGame;
+    }
+
+    public String checkEven(int value) {
+        return value % 2 == 0 ? "yes" : "no";
     }
 }
