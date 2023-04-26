@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
 public class Gcd implements Game {
-    public final int INITIAL_RANGE = 1;
-    public final int END_RANGE = 100;
-    public final int SIZE_ARRAY = 2;
+    public static final int INITIAL_RANGE = 1;
+    public static final int END_RANGE = 100;
+    public static final int SIZE_ARRAY = 2;
 
     public String getTask() {
         return "Find the greatest common divisor of given numbers.";

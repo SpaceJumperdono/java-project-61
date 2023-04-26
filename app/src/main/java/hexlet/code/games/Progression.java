@@ -1,11 +1,11 @@
 package hexlet.code.games;
 
 public class Progression implements Game {
-    public final int INITIAL_RANGE = 1;
-    public final int END_RANGE_MAS = 100;
-    public final int END_RANGE_STEP = 15;
-    public final int PROGRESSION_SIZE = 10;
-    public final int SIZE_ARRAY = 2;
+    public static final int INITIAL_RANGE = 1;
+    public static final int END_RANGE_MAS = 100;
+    public static final int END_RANGE_STEP = 15;
+    public static final int PROGRESSION_SIZE = 10;
+    public static final int SIZE_ARRAY = 2;
 
     public String getTask() {
         return "What number is missing in the progression?";
