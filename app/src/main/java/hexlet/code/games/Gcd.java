@@ -1,10 +1,14 @@
 package hexlet.code.games;
 
-public class Gcd {
+public class Gcd implements Game {
     public static final int INITIAL_RANGE = 1;
     public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;
-    public static String[] gcd() {
+
+    public String getTask() {
+        return "Find the greatest common divisor of given numbers.";
+    }
+    public String[] getDataPair() {
 
         String[] messageGame = new String[SIZE_ARRAY];
         int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);

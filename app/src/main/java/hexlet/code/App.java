@@ -24,7 +24,7 @@ public class App {
 
         System.out.print("Your choice: ");
         int userChoice = Integer.parseInt(scanner.nextLine());
-
+        Engine engine = new Engine();
         switch (userChoice) {
             case GREET:
                 Greeting.greetings(scanner);
