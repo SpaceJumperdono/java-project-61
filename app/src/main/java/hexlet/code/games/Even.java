@@ -35,7 +35,7 @@ public class Even implements Game {
     }
 
     /**
-     * the method returns a string with the answer yes or no if the number is even
+     * the method returns a string with the answer yes or no if the number is even.
      * @author Pavel Mikheev
      * @return string with the answer yes or no
      * @param value - check value for Even
