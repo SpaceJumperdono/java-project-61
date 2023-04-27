@@ -20,7 +20,7 @@ public class Gcd implements Game {
     }
 
     /**
-     * This method returns a question-answer pair for the GDC game
+     * This method returns a question-answer pair for the GDC game.
      * @author Pavel Mikheev
      * @return question-answer pair
      */

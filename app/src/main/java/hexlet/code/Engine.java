@@ -17,7 +17,7 @@ public class Engine {
     /**
      * this method launches games and handles input/output.
      * @author Pavel Mikheev
-     * @game - object of class Game
+     * @param game - object of class Game
      */
     public void start(Game game) {
         Scanner scanner = new Scanner(System.in);
