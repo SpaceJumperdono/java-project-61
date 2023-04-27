@@ -1,5 +1,9 @@
-package hexlet.code;
+/**
+ * The class is designed to control games
+ * @author Pavel Mikheev
+ */
 
+package hexlet.code;
 
 import hexlet.code.games.Game;
 

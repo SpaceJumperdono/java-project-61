@@ -1,3 +1,8 @@
+/**
+ * The class is designed to implement the game Even number
+ * @author Pavel Mikheev
+ */
+
 package hexlet.code.games;
 
 public class Even implements Game {

@@ -1,3 +1,8 @@
+/**
+ * The class implements the prime number game
+ * @author Pavel Mikheev
+ */
+
 package hexlet.code.games;
 
 public class Prime implements Game {

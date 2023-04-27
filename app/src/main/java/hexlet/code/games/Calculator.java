@@ -1,3 +1,8 @@
+/**
+ * The class implements the calculator game
+ * @author Pavel Mikheev
+ */
+
 package hexlet.code.games;
 
 public class Calculator implements Game {

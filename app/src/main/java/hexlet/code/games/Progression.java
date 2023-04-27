@@ -1,3 +1,8 @@
+/**
+ * The class implements the game continue the sequence
+ * @author Pavel Mikheev
+ */
+
 package hexlet.code.games;
 
 public class Progression implements Game {

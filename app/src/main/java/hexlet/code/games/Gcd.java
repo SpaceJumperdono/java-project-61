@@ -1,3 +1,8 @@
+/**
+ * The game implements a game with the least common divisor
+ * @author Pavel Mikheev
+ */
+
 package hexlet.code.games;
 
 public class Gcd implements Game {
