@@ -10,11 +10,19 @@ public class Gcd implements Game {
     public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;
 
+    /**
+     * This method returns a string with the task
+     * @author Pavel Mikheev
+     */
     public String getTask() {
         return "Find the greatest common divisor of given numbers.";
     }
-    public String[] getDataPair() {
 
+    /**
+     * This method returns a question-answer pair for the GDC game
+     * @author Pavel Mikheev
+     */
+    public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
         int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
         int genValue2 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
@@ -26,6 +34,10 @@ public class Gcd implements Game {
         return messageGame;
     }
 
+    /**
+     * method returns the least common divisor of two values
+     * @author Pavel Mikheev
+     */
     public int findGdc(int value1, int value2) {
         while (value1 != 0 && value2 != 0) {
             if (value1 > value2) {

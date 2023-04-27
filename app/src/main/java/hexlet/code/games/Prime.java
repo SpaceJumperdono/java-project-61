@@ -11,9 +11,19 @@ public class Prime implements Game {
     public static final int ROUNDS = 3;
     public static final int SIZE_ARRAY = 2;
 
+    /**
+     * This method returns a string with the task
+     * @author Pavel Mikheev
+     */
+
     public String getTask() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.?";
     }
+
+    /**
+     * This method returns a question-answer pair for the Prime game
+     * @author Pavel Mikheev
+     */
 
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
@@ -23,6 +33,11 @@ public class Prime implements Game {
         messageGame[1] = flagPrime ? "yes" : "no";
         return messageGame;
     }
+
+    /**
+     * the method is designed to test for a prime number
+     * @author Pavel Mikheev
+     */
 
     public boolean checkPrime(int genValue) {
         boolean flagPrime = true;

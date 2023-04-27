@@ -13,6 +13,11 @@ public class Engine {
     public static final int ROUNDS = 3;
     public static final int QUESTION = 0;
     public static final int ANSWER = 1;
+
+    /**
+     * this method launches games and handles input/output
+     * @author Pavel Mikheev
+     */
     public void start(Game game) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -36,6 +41,11 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name + "!");
     }
+
+    /**
+     * this method is override, needed to run only greetings
+     * @author Pavel Mikheev
+     */
     public void start() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");

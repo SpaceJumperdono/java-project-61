@@ -12,9 +12,20 @@ public class Progression implements Game {
     public static final int PROGRESSION_SIZE = 10;
     public static final int SIZE_ARRAY = 2;
 
+    /**
+     * The class returns a string with a task for the game Progression
+     * @author Pavel Mikheev
+     */
+
     public String getTask() {
         return "What number is missing in the progression?";
     }
+
+    /**
+     * This method returns a question-answer pair for the Progression game
+     * @author Pavel Mikheev
+     */
+
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
         int[] progressionArray = new int[PROGRESSION_SIZE];
@@ -30,6 +41,11 @@ public class Progression implements Game {
         messageGame[1] = correctAnswer;
         return messageGame;
     }
+
+    /**
+     * The method returns a string with the elements of the array, including the secret value
+     * @author Pavel Mikheev
+     */
 
     public String printArrayWithSecretValue(int[] array, int randomValue) {
         StringBuilder line = new StringBuilder();

@@ -11,9 +11,19 @@ public class Calculator implements Game {
     public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;
 
+    /**
+     * This method returns a string with the task
+     * @author Pavel Mikheev
+     */
+
     public String getTask() {
         return "What is the result of the expression?";
     }
+
+    /**
+     * This method returns a question-answer pair for the Calculator game
+     * @author Pavel Mikheev
+     */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
         int genOperation = 1 + (int) (Math.random() * NUMBER_OPERATION + 1);
