@@ -1,5 +1,5 @@
 /**
- * The class implements the calculator game
+ * The class implements the calculator game.
  * @author Pavel Mikheev
  */
 
@@ -12,8 +12,9 @@ public class Calculator implements Game {
     public static final int SIZE_ARRAY = 2;
 
     /**
-     * This method returns a string with the task
+     * This method returns a string with the task.
      * @author Pavel Mikheev
+     * @return string with the task
      */
 
     public String getTask() {
@@ -21,8 +22,9 @@ public class Calculator implements Game {
     }
 
     /**
-     * This method returns a question-answer pair for the Calculator game
+     * This method returns a question-answer pair for the Calculator game.
      * @author Pavel Mikheev
+     * @return question-answer pair
      */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];

@@ -1,5 +1,5 @@
 /**
- * The class is designed to implement the game Even number
+ * The class is designed to implement the game Even number.
  * @author Pavel Mikheev
  */
 
@@ -11,16 +11,19 @@ public class Even implements Game {
     public static final int SIZE_ARRAY = 2;
 
     /**
-     * This method returns a string with the task
+     * This method returns a string with the task.
      * @author Pavel Mikheev
+     * @return string with the task
      */
     public String getTask() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     /**
-     * This method returns a question-answer pair for the Even game
+     * This method returns a question-answer pair for the Even game.
      * @author Pavel Mikheev
+     * @return question-answer pair
+     *
      */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
@@ -34,6 +37,8 @@ public class Even implements Game {
     /**
      * the method returns a string with the answer yes or no if the number is even
      * @author Pavel Mikheev
+     * @return string with the answer yes or no
+     * @param value - check value for Even
      */
 
     public String checkEven(int value) {

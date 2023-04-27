@@ -1,5 +1,5 @@
 /**
- * The class implements the game continue the sequence
+ * The class implements the game continue the sequence.
  * @author Pavel Mikheev
  */
 
@@ -13,8 +13,9 @@ public class Progression implements Game {
     public static final int SIZE_ARRAY = 2;
 
     /**
-     * The class returns a string with a task for the game Progression
+     * The class returns a string with a task for the game Progression.
      * @author Pavel Mikheev
+     * @return task for the game Progression
      */
 
     public String getTask() {
@@ -22,8 +23,9 @@ public class Progression implements Game {
     }
 
     /**
-     * This method returns a question-answer pair for the Progression game
+     * This method returns a question-answer pair for the Progression game.
      * @author Pavel Mikheev
+     * @return question-answer pair
      */
 
     public String[] getDataPair() {
@@ -43,8 +45,11 @@ public class Progression implements Game {
     }
 
     /**
-     * The method returns a string with the elements of the array, including the secret value
+     * method to hide the value.
      * @author Pavel Mikheev
+     * @return string with the elements of the array, including the secret value
+     * @param array - array with all elements
+     * @param randomValue - secret value
      */
 
     public String printArrayWithSecretValue(int[] array, int randomValue) {

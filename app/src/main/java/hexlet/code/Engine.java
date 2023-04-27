@@ -1,5 +1,5 @@
 /**
- * The class is designed to control games
+ * The class is designed to control games.
  * @author Pavel Mikheev
  */
 
@@ -15,8 +15,9 @@ public class Engine {
     public static final int ANSWER = 1;
 
     /**
-     * this method launches games and handles input/output
+     * this method launches games and handles input/output.
      * @author Pavel Mikheev
+     * @game - object of class Game
      */
     public void start(Game game) {
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +44,7 @@ public class Engine {
     }
 
     /**
-     * this method is override, needed to run only greetings
+     * this method is override, needed to run only greetings.
      * @author Pavel Mikheev
      */
     public void start() {

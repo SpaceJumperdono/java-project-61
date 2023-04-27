@@ -1,5 +1,5 @@
 /**
- * The game implements a game with the least common divisor
+ * The game implements a game with the least common divisor.
  * @author Pavel Mikheev
  */
 
@@ -11,8 +11,9 @@ public class Gcd implements Game {
     public static final int SIZE_ARRAY = 2;
 
     /**
-     * This method returns a string with the task
+     * This method returns a string with the task.
      * @author Pavel Mikheev
+     * @return tring with the task
      */
     public String getTask() {
         return "Find the greatest common divisor of given numbers.";
@@ -21,6 +22,7 @@ public class Gcd implements Game {
     /**
      * This method returns a question-answer pair for the GDC game
      * @author Pavel Mikheev
+     * @return question-answer pair
      */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
@@ -35,8 +37,11 @@ public class Gcd implements Game {
     }
 
     /**
-     * method returns the least common divisor of two values
+     * method returns the least common divisor of two values.
      * @author Pavel Mikheev
+     * @return least common divisor
+     * @param value1 - first value for common divisor
+     * @param value2 - second value for commin divisor
      */
     public int findGdc(int value1, int value2) {
         while (value1 != 0 && value2 != 0) {

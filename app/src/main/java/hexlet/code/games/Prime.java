@@ -1,5 +1,5 @@
 /**
- * The class implements the prime number game
+ * The class implements the prime number game.
  * @author Pavel Mikheev
  */
 
@@ -12,8 +12,9 @@ public class Prime implements Game {
     public static final int SIZE_ARRAY = 2;
 
     /**
-     * This method returns a string with the task
+     * This method returns a string with the task.
      * @author Pavel Mikheev
+     * @return string with the task
      */
 
     public String getTask() {
@@ -21,8 +22,9 @@ public class Prime implements Game {
     }
 
     /**
-     * This method returns a question-answer pair for the Prime game
+     * This method returns a question-answer pair for the Prime game.
      * @author Pavel Mikheev
+     * @return question-answer pair
      */
 
     public String[] getDataPair() {
@@ -35,8 +37,10 @@ public class Prime implements Game {
     }
 
     /**
-     * the method is designed to test for a prime number
+     * the method is designed to test for a prime number.
      * @author Pavel Mikheev
+     * @return flag of prime number
+     * @param genValue - check value for prime
      */
 
     public boolean checkPrime(int genValue) {
