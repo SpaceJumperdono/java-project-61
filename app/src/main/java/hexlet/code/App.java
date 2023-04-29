@@ -27,30 +27,29 @@ public class App {
 
         System.out.print("Your choice: ");
         int userChoice = Integer.parseInt(scanner.nextLine());
-        Engine engine = new Engine();
         switch (userChoice) {
             case GREET:
                 Cli.greetings();
                 break;
 
             case EVEN:
-                engine.start(new Even());
+                Engine.start(new Even());
                 break;
 
             case CALC:
-                engine.start(new Calculator());
+                Engine.start(new Calculator());
                 break;
 
             case GCD:
-                engine.start(new Gcd());
+                Engine.start(new Gcd());
                 break;
 
             case PROGRESSION:
-                engine.start(new Progression());
+                Engine.start(new Progression());
                 break;
 
             case PRIME:
-                engine.start(new Prime());
+                Engine.start(new Prime());
                 break;
 
             default:
