@@ -6,8 +6,6 @@
 package hexlet.code.games;
 
 public class Even implements Game {
-    public static final int INITIAL_RANGE = 1;
-    public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;
 
     /**
@@ -27,10 +25,10 @@ public class Even implements Game {
      */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
-        int genValue = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        int genValue = Utils.generateValueWithRange();
         messageGame[0] = Integer.toString(genValue);
-        String correctAnswer = checkEven(genValue);
-        messageGame[1] = correctAnswer;
+        boolean flagEven = checkEven(genValue);
+        messageGame[1] = flagEven ? "yes" : "no";
         return messageGame;
     }
 
@@ -41,7 +39,7 @@ public class Even implements Game {
      * @param value - check value for Even
      */
 
-    public String checkEven(int value) {
-        return value % 2 == 0 ? "yes" : "no";
+    public boolean checkEven(int value) {
+        return value % 2 == 0;
     }
 }

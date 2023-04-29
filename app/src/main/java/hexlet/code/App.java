@@ -30,7 +30,7 @@ public class App {
         Engine engine = new Engine();
         switch (userChoice) {
             case GREET:
-                engine.start();
+                Cli.greetings();
                 break;
 
             case EVEN:

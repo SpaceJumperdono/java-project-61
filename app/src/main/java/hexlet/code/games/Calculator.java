@@ -7,8 +7,6 @@ package hexlet.code.games;
 
 public class Calculator implements Game {
     public static final int NUMBER_OPERATION = 3;
-    public static final int INITIAL_RANGE = 1;
-    public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;
 
     /**
@@ -28,9 +26,9 @@ public class Calculator implements Game {
      */
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
-        int genOperation = 1 + (int) (Math.random() * NUMBER_OPERATION + 1);
-        int genValue1 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
-        int genValue2 = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        int genOperation = Utils.generateSpecialValue(NUMBER_OPERATION);
+        int genValue1 = Utils.generateValueWithRange();
+        int genValue2 = Utils.generateValueWithRange();
         int result = 0;
         String question = "";
         switch (genOperation) {
@@ -42,10 +40,13 @@ public class Calculator implements Game {
                 result = genValue1 - genValue2;
                 question = genValue1 + " - " + genValue2;
                 break;
-            default:
+            case 3:
                 result = genValue1 * genValue2;
                 question = genValue1 + " * " + genValue2;
                 break;
+            default:
+                System.out.println("Invalid operation");
+                System.exit(1);
 
         }
         messageGame[0] = question;

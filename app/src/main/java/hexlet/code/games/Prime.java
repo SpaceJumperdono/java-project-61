@@ -6,8 +6,6 @@
 package hexlet.code.games;
 
 public class Prime implements Game {
-    public static final int INITIAL_RANGE = 1;
-    public static final int END_RANGE = 100;
     public static final int ROUNDS = 3;
     public static final int SIZE_ARRAY = 2;
 
@@ -29,10 +27,9 @@ public class Prime implements Game {
 
     public String[] getDataPair() {
         String[] messageGame = new String[SIZE_ARRAY];
-        int genValue = INITIAL_RANGE + (int) (Math.random() * END_RANGE + 1);
+        int genValue = Utils.generateValueWithRange();
         messageGame[0] = Integer.toString(genValue);
-        boolean flagPrime = checkPrime(genValue);
-        messageGame[1] = flagPrime ? "yes" : "no";
+        messageGame[1] = checkPrime(genValue) ? "yes" : "no";
         return messageGame;
     }
 

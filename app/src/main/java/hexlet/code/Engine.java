@@ -19,7 +19,7 @@ public class Engine {
      * @author Pavel Mikheev
      * @param game - object of class Game
      */
-    public void start(Game game) {
+    public static void start(Game game) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -42,18 +42,4 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name + "!");
     }
-
-    /**
-     * this method is override, needed to run only greetings.
-     * @author Pavel Mikheev
-     */
-    public void start() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-    }
-
-
 }
