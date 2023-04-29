@@ -8,6 +8,9 @@ package hexlet.code.games;
 public class Calculator implements Game {
     public static final int NUMBER_OPERATION = 3;
     public static final int SIZE_ARRAY = 2;
+    public static final int SUM = 1;
+    public static final int SUBTRACTION = 2;
+    public static final int MULTIPLICATION = 3;
 
     /**
      * This method returns a string with the task.
@@ -32,15 +35,15 @@ public class Calculator implements Game {
         int result = 0;
         String question = "";
         switch (genOperation) {
-            case 1:
+            case SUM:
                 result = genValue1 + genValue2;
                 question = genValue1 + " + " + genValue2;
                 break;
-            case 2:
+            case SUBTRACTION:
                 result = genValue1 - genValue2;
                 question = genValue1 + " - " + genValue2;
                 break;
-            case 3:
+            case MULTIPLICATION:
                 result = genValue1 * genValue2;
                 question = genValue1 + " * " + genValue2;
                 break;
