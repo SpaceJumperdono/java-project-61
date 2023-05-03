@@ -5,6 +5,8 @@
 
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Prime implements Game {
     public static final int ROUNDS = 3;
     public static final int SIZE_ARRAY = 2;

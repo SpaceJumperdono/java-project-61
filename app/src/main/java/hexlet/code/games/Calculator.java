@@ -5,6 +5,8 @@
 
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Calculator implements Game {
     public static final int NUMBER_OPERATION = 3;
     public static final int SIZE_ARRAY = 2;

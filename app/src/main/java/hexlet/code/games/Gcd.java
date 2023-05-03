@@ -5,6 +5,8 @@
 
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Gcd implements Game {
     public static final int END_RANGE = 100;
     public static final int SIZE_ARRAY = 2;

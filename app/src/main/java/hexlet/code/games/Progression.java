@@ -5,6 +5,8 @@
 
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Progression implements Game {
 
 
@@ -33,12 +35,12 @@ public class Progression implements Game {
         int[] progressionArray = new int[PROGRESSION_SIZE];
         int startValue = Utils.generateValueWithRange();
         int genStep = Utils.generateSpecialValue(END_RANGE_STEP);
-        int randomValue = (int) (Math.random() * progressionArray.length);
+        int randomValue = Utils.generateArrayIndex(progressionArray.length);
         progressionArray[0] = startValue;
         for (int j = 1; j < progressionArray.length; j++) {
             progressionArray[j] = progressionArray[j - 1] + genStep;
         }
-        messageGame[0] = getPrintWithSecretValue(progressionArray, randomValue);
+        messageGame[0] = getProgressionWithMissingValue(progressionArray, randomValue);
         String correctAnswer = Integer.toString(progressionArray[randomValue]);
         messageGame[1] = correctAnswer;
         return messageGame;
@@ -52,7 +54,7 @@ public class Progression implements Game {
      * @param randomValue - secret value
      */
 
-    public String getPrintWithSecretValue(int[] array, int randomValue) {
+    public String getProgressionWithMissingValue(int[] array, int randomValue) {
         StringBuilder line = new StringBuilder();
         for (int j = 0; j < array.length; j++) {
             if (j == randomValue) {
